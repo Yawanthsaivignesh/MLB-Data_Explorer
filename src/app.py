@@ -21,8 +21,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-
 # Custom CSS for purple theme and improved text visibility
 def set_advanced_theme():
     st.markdown("""
@@ -138,6 +136,8 @@ class MLBDataRetriever:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
             'Accept': 'application/json'
         }
+
+        
         for endpoint in endpoints:
             try:
                 response = requests.get(endpoint, headers=headers, timeout=10)
